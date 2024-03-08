@@ -1,0 +1,17 @@
+GEMS:
+  # currency display name
+  display-name: '&dGems'
+  # currency symbol
+  currency-symbol: '✦'
+  # Item to be display in GUI
+  display-item: AMETHYST_SHARD
+  # Starting player's balance
+  starting-balance: 0
+  # The maximum amount a player can hold
+  max-amount: 10
+  # The minimum amount a player can hold
+  min-amount: 0
+  # Enable or disable payment
+  pay: false
+  # The minimum amount of payout
+  minimum-pay-amount: 0.0001

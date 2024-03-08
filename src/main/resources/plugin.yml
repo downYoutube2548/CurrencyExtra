@@ -1,0 +1,7 @@
+name: CurrencyExtra
+version: '${project.version}'
+main: com.downn_fzl.currencyextra.CurrencyExtra
+api-version: 1.20
+commands:
+  currencyextra:
+    permission: currencyextra.admin

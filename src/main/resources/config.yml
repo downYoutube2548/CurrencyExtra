@@ -1,0 +1,21 @@
+mysql:
+  host: 127.0.0.1
+  user: root
+  pass: ''
+  port: 3306
+  useSSL: false
+  database: ''
+
+message:
+  prefix: "&6[&eCurrencyExtra&6]"
+  load-data-success: "&7Successfully load your currency data! &6(&e{duration}ms&6)"
+  data-not-load: "&cYour data is not load! Please wait a moment."
+  give-success: '&eGive &f{amount} &6{currency} &eto &6{target}&e, Balance: &6{balance}'
+  take-success: '&eTake &f{amount} &6{currency} &efrom &6{target}&e, Balance: &6{balance}'
+  set-success: '&eSet &6{current} &eof &6{target} &eto &6{balance}'
+  balance: '&f{currency}&7: &f{amount}&f{symbol}'
+  balance-other: '&f{target}''s &f{currency}&7: &f{amount}&f{symbol}'
+  invalid-player: "&7Invalid player &c\"{player}\"&7!"
+  invalid-syntax: "&cInvalid command syntax!"
+  usage: "&7Usage: &e{command}"
+
