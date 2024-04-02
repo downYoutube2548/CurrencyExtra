@@ -49,7 +49,7 @@ public class TakeCommandTreeNode extends CommandTreeNode {
                         OfflinePlayer player = Bukkit.getOfflinePlayer(args[0]);
                         if (player.hasPlayedBefore()) {
 
-                            CurrencyExtra.databaseManager.loadTemp(player.getUniqueId(), playerData -> {
+                            PlayerData.getSavedData(player.getUniqueId(), playerData -> {
                                 double amount = Double.parseDouble(args[1]);
                                 playerData.withdraw(currency, amount);
                                 sender.sendMessage(Utils.getMessage("take-success", true)

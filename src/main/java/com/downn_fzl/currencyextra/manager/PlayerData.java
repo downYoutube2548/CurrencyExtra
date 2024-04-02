@@ -71,8 +71,8 @@ public class PlayerData {
 
         double current = getBalance(currency);
 
-        double finalValue = Math.min(current + value, getMaxBalance(currency));
-        setBalance(currency, finalValue, false);
+        double finalValue = Math.min(current + Math.max(value, 0), Math.max(getMaxBalance(currency), current));
+        setBalance(currency, finalValue, true);
 
     }
 
@@ -80,8 +80,8 @@ public class PlayerData {
 
         double current = getBalance(currency);
 
-        double finalValue = Math.max(current - value, currency.getDefaultMinAmount());
-        setBalance(currency, finalValue, false);
+        double finalValue = Math.max(current - Math.max(value, 0), Math.min(currency.getDefaultMinAmount(), current));
+        setBalance(currency, finalValue, true);
 
     }
 

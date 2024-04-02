@@ -12,7 +12,10 @@ message:
   data-not-load: "&cYour data is not load! Please wait a moment."
   give-success: '&eGive &f{amount} &6{currency} &eto &6{target}&e, Balance: &6{balance}'
   take-success: '&eTake &f{amount} &6{currency} &efrom &6{target}&e, Balance: &6{balance}'
-  set-success: '&eSet &6{current} &eof &6{target} &eto &6{balance}'
+  set-success: '&eSet &6{currency} &eof &6{target} &eto &6{balance}'
+  max-increase-success: "&eThe &6{target}&e's maximum &6{currency}&e has been increased by &6{amount}&e, Maximum: &6{max}"
+  max-reduce-success: "&eThe &6{target}&e's maximum &6{currency}&e has been reduced by &6{amount}&e, Maximum: &6{max}"
+  max-set-success: "&eThe &6{target}&e's maximum &6{currency}&e has been set to &6{amount}&e."
   balance: '&f{currency}&7: &f{amount}&f{symbol}'
   balance-other: '&f{target}''s &f{currency}&7: &f{amount}&f{symbol}'
   invalid-player: "&7Invalid player &c\"{player}\"&7!"

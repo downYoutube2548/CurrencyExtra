@@ -45,6 +45,11 @@ public abstract class CommandTreeNode {
                 List<String> argument = new ArrayList<>(Arrays.asList(args));
                 argument.remove(0);
                 children.get(args[0]).execute(sender, command, argument.toArray(String[]::new));
+            } else {
+                sender.sendMessage(Utils.getMessage("invalid-syntax", true));
+                sender.sendMessage(Utils.getMessage("usage", true)
+                        .replace("{command}", getCurrentCommand(command) + " " + String.join("/", children.keySet()))
+                );
             }
         } else {
             sender.sendMessage(Utils.getMessage("invalid-syntax", true));

@@ -30,6 +30,7 @@ public class CurrencyCommand extends BukkitCommand {
         addChild(new TakeCommandTreeNode(null));
         addChild(new MaxCommandTreeNode(null));
         addChild(new SetCommandTreeNode(null));
+        addChild(new PayCommandTreeNode(null));
     }
 
     public void addChild(CommandTreeNode child) { children.put(child.getId(), child); }
@@ -42,6 +43,11 @@ public class CurrencyCommand extends BukkitCommand {
                 List<String> argument = new ArrayList<>(Arrays.asList(args));
                 argument.remove(0);
                 children.get(args[0]).execute(sender, command, argument.toArray(String[]::new));
+            } else {
+                sender.sendMessage(Utils.getMessage("invalid-syntax", true));
+                sender.sendMessage(Utils.getMessage("usage", true)
+                        .replace("{command}", "/" + command + " " + String.join("/", children.keySet()))
+                );
             }
         } else {
             if (sender instanceof Player player) {

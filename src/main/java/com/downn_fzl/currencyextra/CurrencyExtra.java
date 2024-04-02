@@ -1,6 +1,6 @@
 package com.downn_fzl.currencyextra;
 
-import com.downn_fzl.currencyextra.command.CoreCommand;
+import com.downn_fzl.currencyextra.command.CoreCommand.CoreCommand;
 import com.downn_fzl.currencyextra.command.CurrencyCommand.CurrencyCommand;
 import com.downn_fzl.currencyextra.database.DatabaseManager;
 import com.downn_fzl.currencyextra.database.DatabaseTimeOutFix;

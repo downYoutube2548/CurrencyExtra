@@ -40,7 +40,7 @@ public class CheckCommandTreeNode extends CommandTreeNode {
                     OfflinePlayer player = Bukkit.getOfflinePlayer(args[0]);
                     if (player.hasPlayedBefore()) {
 
-                        CurrencyExtra.databaseManager.loadTemp(player.getUniqueId(), playerData -> sender.sendMessage(Utils.getMessage("balance-other", true)
+                        PlayerData.getSavedData(player.getUniqueId(), playerData -> sender.sendMessage(Utils.getMessage("balance-other", true)
                                 .replace("{target}", args[0])
                                 .replace("{amount}", Utils.formatNumber(playerData.getBalance(currency)))
                                 .replace("{symbol}", currency.getSymbol())

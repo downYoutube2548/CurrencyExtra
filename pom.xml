@@ -76,5 +76,18 @@
             <version>24.0.1</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>net.Indyuce</groupId>
+            <artifactId>MMOItems-API</artifactId>
+            <version>6.9.4-SNAPSHOT</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.lumine</groupId>
+            <artifactId>MythicLib-dist</artifactId>
+            <version>1.6-SNAPSHOT</version>
+            <scope>provided</scope>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 </project>
